@@ -1,0 +1,42 @@
+body {
+    color: white;
+    background-color: sienna;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+}
+
+img {
+    width: 250px;
+    height: 400px;
+    border-radius: 50%;
+    border: 5px solid green
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; 
+}
+
+h3 {
+    font-family: 'Merriweather', serif; 
+}
+
+h3 {
+    color: green;
+}
+

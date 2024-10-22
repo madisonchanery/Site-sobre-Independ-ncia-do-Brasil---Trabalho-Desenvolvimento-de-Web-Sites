@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>História</title>
+    <link rel="stylesheet" href="historia.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #A0522D;
+            color: white;
+        }
+        h3 {
+            font-family: 'Merriweather', serif;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+            padding: 20px;
+            list-style: none;
+            overflow: hidden;
+        }
+        .timeline-event {
+            position: relative;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+            background: #f9f9f9;
+            border-radius: 4px;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: fadeIn 1s forwards;
+        }
+        .timeline-event:nth-child(even) {
+            background: #e0f7fa;
+        }
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4CAF50;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+
+        .responsive-img {
+            max-width: 100%; 
+            height: auto; 
+            margin: 10px 0; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li><a href="documentos.html">Documentos</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contato.html">Contato</a></li>                                  
+        </ul>
+    </nav>
+    <main>
+        <h3>Dom Pedro I: O Protagonista da Independência do Brasil</h3>
+        <p>
+            A independência do Brasil foi um processo gradual e complexo, marcado por tensões políticas, sociais e econômicas que culminaram na separação do país de Portugal em 1822. Este artigo traça um panorama dos principais eventos que levaram à criação de uma nação independente, começando pelos antecedentes históricos até as consequências desse marco.
+        </p>
+        
+
+        <img src="./img/corte-portuguesa.jpg" alt="Corte Portuguesa" class="responsive-img">
+        
+        <h3>Antecedentes Históricos</h3>
+        <p>
+            O caminho para a independência do Brasil começou a ser pavimentado ainda no século XVIII. Durante esse período, o Brasil era uma colônia de Portugal e sofria com uma série de restrições econômicas impostas pela metrópole, como os altos impostos e o controle rígido do comércio exterior. Essas condições causavam descontentamento entre os colonos, especialmente os da elite econômica, como fazendeiros e comerciantes, que viam suas riquezas sendo drenadas pela Coroa.
+        </p>
+        <p>
+            Além disso, o contexto global favorecia a ideia de emancipação. A Revolução Americana (1776) e a Revolução Francesa (1789) serviram de inspiração para movimentos nacionalistas e liberais. No Brasil, revoltas como a Inconfidência Mineira (1789) e a Conjuração Baiana (1798) foram tentativas iniciais de contestar o domínio português, embora tenham sido reprimidas com severidade.
+        </p>
+
+ 
+        <img src="./img/Familia.jpg" alt="Família Real" class="responsive-img">
+        
+        <h3>A Família Real no Brasil e o Reino Unido de Portugal, Brasil e Algarves</h3>
+        <p>
+            O contexto mudou drasticamente com a chegada da família real portuguesa ao Brasil, em 1808, fugindo das tropas de Napoleão Bonaparte, que invadira Portugal. Sob a liderança de Dom João VI, o Brasil passou a ocupar um papel central no império português. O país foi elevado à categoria de Reino Unido de Portugal, Brasil e Algarves em 1815, o que significou um certo grau de autonomia política e econômica. Isso despertou, especialmente na elite brasileira, o desejo de que essa autonomia fosse ampliada.
+        </p>
+        <p>
+            Contudo, a volta de Dom João VI a Portugal em 1821, após a Revolução Liberal do Porto, e a pressão para que o Brasil voltasse à condição de colônia, reacenderam as tensões. Nesse cenário, Dom Pedro, filho de Dom João VI, foi deixado no Brasil como regente, e a independência passou a ser vista como uma solução para a manutenção dos interesses locais.
+        </p>
+
+ 
+        <img src="./img/Grito.JPG" alt="Grito do Ipiranga" class="responsive-img">
+
+        <h3>O Famoso Grito do Ipiranga</h3>
+        <p>
+            Em 1822, os acontecimentos se precipitaram. A crescente pressão das Cortes portuguesas para restringir os poderes de Dom Pedro e submeter o Brasil novamente à condição colonial provocou a reação das lideranças brasileiras. Incentivado por conselheiros como José Bonifácio de Andrada e Silva e a princesa Leopoldina, Dom Pedro recusou as ordens das Cortes de retornar a Portugal e, no dia 9 de janeiro de 1822, proclamou o "Dia do Fico", afirmando sua decisão de permanecer no Brasil.
+        </p>
+        <p>
+            A partir desse momento, os laços com Portugal começaram a ser rompidos gradualmente. Diversas províncias brasileiras passaram a apoiar a causa da independência, e a tensão aumentou. O ponto culminante veio em 7 de setembro de 1822, às margens do riacho Ipiranga, em São Paulo, quando Dom Pedro, supostamente empunhando sua espada, proclamou o célebre "Independência ou Morte". Este ato simbolizou o rompimento oficial dos laços com Portugal.
+        </p>
+
+
+        <img src="./img/Ipiranga.jpg" alt="Ipiranga" class="responsive-img">
+
+        <h3>As Consequências Imediatas</h3>
+        <p>
+            Embora o Grito do Ipiranga seja o símbolo da independência, o processo não foi simples. A guerra de independência se estendeu por mais dois anos, com confrontos militares em várias províncias, principalmente no Norte e no Nordeste, onde a resistência portuguesa era mais forte. Somente em 1824, após a adesão da província do Pará e a rendição das tropas leais a Portugal, a independência foi plenamente consolidada.
+        </p>
+        <p>
+            Além disso, a independência do Brasil não resultou em mudanças sociais significativas imediatas. A economia permaneceu baseada no trabalho escravo, e a nova nação manteve sua estrutura agrária, com grandes latifúndios controlados pela elite. No entanto, a independência marcou o início de um processo de construção de identidade nacional.
+        </p>
+
+        <h3>O Impacto na Construção da Nação Brasileira</h3>
+        <p>
+            A independência do Brasil teve profundas consequências políticas e culturais. Em 1822, o Brasil tornou-se um Império, com Dom Pedro I coroado como imperador. Isso marcou uma diferença significativa em relação ao restante da América Latina, que, em sua maioria, se organizou em repúblicas após a independência.
+        </p>
+        <p>
+            No plano internacional, o Brasil teve que negociar seu reconhecimento como nação soberana, o que veio gradualmente, com os Estados Unidos sendo o primeiro país a reconhecer a independência brasileira em 1824. Portugal só reconheceu oficialmente a independência em 1825, mediante pagamento de uma compensação financeira.
+        </p>
+        <p>
+            A independência foi um momento crucial na história do Brasil, pois deu início a um longo processo de formação de uma identidade nacional, que ainda está em construção e é influenciado por suas diversas culturas, etnias e tradições. O Brasil, assim como qualquer nação, é um conjunto de histórias, experiências e desafios. A independência foi apenas o primeiro passo em uma longa trajetória que levaria à formação do Brasil moderno que conhecemos hoje.
+        </p>
+
+ 
+        <h3>Cronologia dos Eventos Históricos da Independência do Brasil</h3>
+        <ul class="timeline">
+            <li class="timeline-event" style="animation-delay: 0.2s;">
+                <strong>1789:</strong> Inconfidência Mineira - Movimento que buscava a independência do Brasil.
+            </li>
+            <li class="timeline-event" style="animation-delay: 0.4s;">
+                <strong>1798:</strong> Conjuração Baiana - Revolta na Bahia contra as desigualdades sociais e políticas.
+            </li>
+            <li class="timeline-event" style="animation-delay: 0.6s;">
+                <strong>1808:</strong> A família real portuguesa chega ao Brasil fugindo de Napoleão.
+            </li>
+            <li class="timeline-event" style="animation-delay: 0.8s;">
+                <strong>1821:</strong> Dom João VI retorna a Portugal, deixando Dom Pedro como regente no Brasil.
+            </li>
+            <li class="timeline-event" style="animation-delay: 1s;">
+                <strong>1822:</strong> Grito do Ipiranga - Dom Pedro proclama a independência do Brasil.
+            </li>
+            <li class="timeline-event" style="animation-delay: 1.2s;">
+                <strong>1824:</strong> Reconhecimento da independência brasileira por diversos países, incluindo os Estados Unidos.
+            </li>
+        </ul>
+
+
+        <h3>Mapa da Independência do Brasil</h3>
+        <div id="map"></div>
+
+        <script>
+ 
+            var map = L.map('map').setView([-15.7801, -47.9292], 4); 
+
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+ 
+            L.marker([-23.5505, -46.6333]).addTo(map).bindPopup('São Paulo');
+            L.marker([-22.9068, -43.1729]).addTo(map).bindPopup('Rio de Janeiro');
+            L.marker([-15.7801, -47.9292]).addTo(map).bindPopup('Brasília');
+        </script>
+    </main>
+</body>
+</html>
